@@ -43,11 +43,27 @@
 
 
 .wellcome-text {
-    transform: translate(-100px, -100px);
+    /*transform: translate(-100px, -100px);*/
+}
+
+.landing-grid {
+    width: 100%;
+    min-height: calc(100vh - 188px);
+    margin: 0;
+    background-size: cover;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #242424 96%), url('/landingBg.jpeg') no-repeat center;
+}
+
+.about-text {
+    padding: 100px 30%;
 }
 
 @media (max-width: 1024px) {
     .wellcome-text {
         transform: none;
+    }
+
+    .about-text {
+        padding: 10px;
     }
 }

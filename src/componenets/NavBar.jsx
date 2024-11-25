@@ -13,16 +13,16 @@ export const NavBar = () => {
                 <Logo/>
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem isActive>
+                <NavbarItem>
                     {pageTitle}
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <motion.div className='d-flex' whileHover={{scale: 1.1}}
+                    <motion.div className='d-flex' whileHover={{scale: 0.9}}
                                 whileTap={{scale: 0.95}}>
                         <Button as={Link} color="primary" href="#/Cart" variant="flat"
-                                style={{background: '#2D4C3A', color: 'white'}}>
+                                style={{padding: 0, margin: 0, background: '#2D4C3A', color: 'white'}}>
                             <ShoppingCartIcon/>
                             Cart
                         </Button>
