@@ -1,43 +1,20 @@
 import './App.css'
-
-import {AppBar, Container, Toolbar, Typography} from "@mui/material";
-import {Counter} from "./componenets/Counter.jsx";
-
+import React from 'react';
+import plantDatabase from './assets/data';
+import AppRouter from "./AppRouter.jsx";
+import {NavBar} from "./componenets/NavBar.jsx";
 
 function App() {
-    const Pages = {
-        LANDING: 'Landing',
-        STORE: 'Store',
-        CART: 'Cart',
-        PRODUCT: 'Product'
-    }
+
+
+    const products = plantDatabase();
+
+    console.log(products);
 
     return (
         <>
-            <AppBar position="static" color="default">
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            sx={{
-                                mr: 2,
-                                display: {xs: 'flex', md: 'none'},
-                                flexGrow: 1,
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
-                        >
-                            Store
-                        </Typography>
-
-                    </Toolbar>
-                </Container>
-            </AppBar>
-            <Counter/>
+            <NavBar/>
+            <AppRouter/>
         </>
     )
 }

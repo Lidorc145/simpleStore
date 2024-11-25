@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {increment, selectCount,} from './counterSlice';
+import {increment, selectCount,} from './storeSlice.jsx';
 import store from "../app/store.jsx";
 
 

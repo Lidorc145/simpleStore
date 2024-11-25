@@ -1,9 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-export const counterSlice = createSlice({
-    name: 'counter',
+export const storeSlice = createSlice({
+    name: 'store',
     initialState: {
         value: 0,
+        pageTitle: '',
     },
     reducers: {
         increment: (state) => {
@@ -13,11 +14,16 @@ export const counterSlice = createSlice({
             // immutable state based off those changes
             state.value += 1
         },
+        setTitle: (state, action) => {
+            // Update the pageTitle using the payload from the action
+            state.pageTitle = action.payload;
+        },
     },
 })
 
-export const {increment, decrement, incrementByAmount} = counterSlice.actions
+export const {increment, setTitle} = storeSlice.actions
 
 export const selectCount = (state) => state.counter.value
+export const selectPageTitle = (state) => state.counter.pageTitle;
 
-export default counterSlice.reducer
+export default storeSlice.reducer

@@ -1,5 +1,4 @@
 #root {
-    max-width: 1280px;
     margin: 0 auto;
     text-align: center;
 }
@@ -40,4 +39,15 @@
 
 .read-the-docs {
     color: #888;
+}
+
+
+.wellcome-text {
+    transform: translate(-100px, -100px);
+}
+
+@media (max-width: 1024px) {
+    .wellcome-text {
+        transform: none;
+    }
 }
